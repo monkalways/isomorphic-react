@@ -7,7 +7,6 @@ export default function * () {
         const raw = yield fetch('/api/questions');
         const json = yield raw.json();
         const questions = json.items;
-        console.log('Got questions...', questions);
         yield put({ 
             type: 'FETCH_QUESTIONS',
             questions
